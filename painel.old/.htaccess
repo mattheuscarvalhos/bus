@@ -1,9 +1,0 @@
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-
-
-RewriteRule ^acessos(.*)$ index.php?pagina=acessos [L]
-RewriteRule ^grupos(.*)$ index.php?pagina=grupos [L]
-RewriteRule ^funcoes(.*)$ index.php?pagina=funcoes [L]
-RewriteRule ^usuarios(.*)$ index.php?pagina=usuarios [L]
