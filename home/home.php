@@ -14,13 +14,14 @@ require_once('../home/verificar.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- TITULO -->
-    <title>Aemarbus - Login</title>
+    <title>Aemarbus - Checkin</title>
 
     <link rel="icon" href="assets/img/comum/favicon.png" type="image/x-icon" />
     <link href="../assets/css/icons.css" rel="stylesheet">
     <link id="style" href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../assets/css/login_painel/custom.css" rel="stylesheet">
     <link href="../assets/css/login_painel/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://kit.fontawesome.com/6320f7a20c.js" crossorigin="anonymous"></script>
 </head>
 
@@ -94,46 +95,84 @@ require_once('../home/verificar.php');
                                                 <div class="panel-body tabs-menu-body border-0 p-3">
                                                     
 
-                                                <form method="post" onsubmit="return validarAssento()">
+                                                <form method="post" action="reservar.php">
     <div class="form-group">
         <label for="busSelect" class="form-label">Selecione o ônibus</label>
-        <select class="form-select" id="busSelect" required>
+        <select class="form-select" id="busSelect" name="onibusazul" required>
             <option value="" disabled selected>Selecione o ônibus</option>
             <option value="1">Ônibus Azul</option>
             <option value="2">Ônibus Verde</option>
         </select>
     </div>
+
     <div class="form-group">
         <label for="faculdadeSelect" class="form-label">Selecione a faculdade</label>
-        <select class="form-select" id="faculdadeSelect" required>
+        <select class="form-select" id="faculdadeSelect" name="faculdade" required>
             <option value="" disabled selected>Selecione a faculdade</option>
             <option value="faculdade1">Faculdade 1</option>
             <option value="faculdade2">Faculdade 2</option>
         </select>
     </div>
+
     <div class="form-group">
-        <label for="dataInput" class="form-label">Data</label>
-        <input type="date" class="form-control" id="dataInput" name="dataInput" value="<?php echo date('Y-m-d'); ?>" readonly required>
-    </div>
+    <label for="assentoSelect" class="form-label">Selecione o assento</label>
+    <select class="form-select" id="assentoSelect" name="numeroassento" required>
+        <option value="" disabled selected>Selecione o assento</option>
+        <option value="assento01">01</option>
+        <option value="assento02">02</option>
+        <option value="assento03">03</option>
+        <option value="assento04">04</option>
+        <option value="assento05">05</option>
+        <option value="assento06">06</option>
+        <option value="assento07">07</option>
+        <option value="assento08">08</option>
+        <option value="assento09">09</option>
+        <option value="assento10">10</option>
+        <option value="assento11">11</option>
+        <option value="assento12">12</option>
+        <option value="assento13">13</option>
+        <option value="assento14">14</option>
+        <option value="assento15">15</option>
+        <option value="assento16">16</option>
+        <option value="assento17">17</option>
+        <option value="assento18">18</option>
+        <option value="assento19">19</option>
+        <option value="assento20">20</option>
+        <option value="assento21">21</option>
+        <option value="assento22">22</option>
+        <option value="assento23">23</option>
+        <option value="assento24">24</option>
+        <option value="assento25">25</option>
+        <option value="assento26">26</option>
+        <option value="assento27">27</option>
+        <option value="assento28">28</option>
+        <option value="assento29">29</option>
+        <option value="assento30">30</option>
+        <option value="assento31">31</option>
+        <option value="assento32">32</option>
+        <option value="assento33">33</option>
+        <option value="assento34">34</option>
+        <option value="assento35">35</option>
+        <option value="assento36">36</option>
+        <option value="assento37">37</option>
+        <option value="assento38">38</option>
+        <option value="assento39">39</option>
+        <option value="assento40">40</option>
+        <option value="assento41">41</option>
+        <option value="assento42">42</option>
+        <option value="assento43">43</option>
+        <option value="assento44">44</option>
+        <option value="assento45">45</option>
+        <option value="assento46">46</option>
+    </select>
+</div>
+
+
     <button type="submit" class="btn btn-primary btn-block">Confirmar Assento</button>
 </form>
 
-<script>
-    function validarAssento() {
-        var assentoSelecionado = document.getElementById("busSelect").value;
 
-        if (assentoSelecionado === "") {
-            alert("Por favor, selecione um assento antes de confirmar.");
-            return false;
-        }
 
-        // Adicione o código para redirecionar para a página desejada
-        window.location.href = "../home/reservar/busblue.php";
-
-        // Retorna false para impedir o envio do formulário (opcional)
-        return false;
-    }
-</script>
 
                                                 </div>
                                             </div>
@@ -147,6 +186,8 @@ require_once('../home/verificar.php');
             </div>
         </div>
     </div>
+
+
 
 
     <script src="../assets/plugins/jquery/jquery.min.js"></script>
